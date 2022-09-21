@@ -1,9 +1,9 @@
 <!-- <hr class="mt-8 mb-4 h-px bg-gray-200 border-0 dark:bg-gray-700"> -->
 <div class="mt-24">
 	<div class="flex justify-center mb-3">
-		<div class="mx-5 text-white">Home</div>
+		<a href="/" class="mx-5 text-white">Home/About</a>
 		<div class="mx-5 text-white">Contact</div>
-		<div class="mx-5 text-white">Blog</div>
+		<a href="/blog" class="mx-5 text-white">Blog</a>
 	</div>
 	<div class="flex justify-center">
 		<a href="https://kit.svelte.dev/" target="_blank">

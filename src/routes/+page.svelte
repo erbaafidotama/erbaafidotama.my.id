@@ -286,7 +286,7 @@
 	</div>
 </div>
 
-<style>
+<!-- <style>
 	:global(body) {
 		/* background: linear-gradient(165deg, #1F7B61 0%, #fff 77%); */
 		/* background-color: #f2eee2; */
@@ -295,4 +295,4 @@
 		background-image: url('/images/cool-bg.png');
 		background-repeat: repeat;
 	}
-</style>
+</style> -->
