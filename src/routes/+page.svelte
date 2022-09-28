@@ -1,3 +1,7 @@
+<script>
+	export let data
+</script>
+
 <div class="container mx-auto py-11">
 	<div class="border-double border-4 border-grey-600 rounded-lg shadow-2xl bg-black/[0.5]">
 		<div class="p-4">
@@ -56,15 +60,13 @@
 		>
 			<div class="p-4">
 				<div class="flex justify-center">
-					<p class="text-xl">My Skil</p>
+					<p class="text-4xl font-semibold">My Skill</p>
 				</div>
-				<div class="flex justify-center">
-					<p class="text-xl mx-5">My Skil</p>
-					<p class="text-xl mx-5">My Skil</p>
-					<p class="text-xl mx-5">My Skil</p>
-					<p class="text-xl mx-5">My Skil</p>
-					<p class="text-xl mx-5">My Skil</p>
-					<p class="text-xl mx-5">My Skil</p>
+				<div class="flex justify-center mt-5">
+					<img src="/images/svelte-logo.png" alt="" class="w-18 h-20 mx-5" />
+					<img src="/images/react-logo.png" alt="" class="w-18 h-20 mx-5" />
+					<img src="/images/golang-logo.png" alt="" class="w-18 h-14 mx-5 mt-3" />
+					<img src="/images/flutter-logo.png" alt="" class="w-18 h-20 mx-5" />
 				</div>
 			</div>
 		</div>
@@ -75,83 +77,21 @@
 		<p class="text-4xl text-white font-bold">My Blog</p>
 	</div>
 	<div class="grid grid-cols-4 gap-4 mt-5">
+		{#each data.posts as post}
 		<a
-			href="#"
+			href={post.path}
 			class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
 		>
 			<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-				Noteworthy technology acquisitions 2021
+				{post.meta.title}
 			</h5>
 			<p class="font-normal text-gray-700 dark:text-gray-400">
 				Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
 				chronological order.
 			</p>
+			<p class="mt-5">Published {post.meta.date}</p>
 		</a>
-
-		<a
-			href="#"
-			class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-		>
-			<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-				Noteworthy technology acquisitions 2021
-			</h5>
-			<p class="font-normal text-gray-700 dark:text-gray-400">
-				Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-				chronological order.
-			</p>
-		</a>
-
-		<a
-			href="#"
-			class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-		>
-			<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-				Noteworthy technology acquisitions 2021
-			</h5>
-			<p class="font-normal text-gray-700 dark:text-gray-400">
-				Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-				chronological order.
-			</p>
-		</a>
-
-		<a
-			href="#"
-			class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-		>
-			<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-				Noteworthy technology acquisitions 2021
-			</h5>
-			<p class="font-normal text-gray-700 dark:text-gray-400">
-				Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-				chronological order.
-			</p>
-		</a>
-
-		<a
-			href="#"
-			class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-		>
-			<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-				Noteworthy technology acquisitions 2021
-			</h5>
-			<p class="font-normal text-gray-700 dark:text-gray-400">
-				Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-				chronological order.
-			</p>
-		</a>
-
-		<a
-			href="#"
-			class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-		>
-			<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-				Noteworthy technology acquisitions 2021
-			</h5>
-			<p class="font-normal text-gray-700 dark:text-gray-400">
-				Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-				chronological order.
-			</p>
-		</a>
+	{/each}
 	</div>
 
 	<!-- GITHUB -->
